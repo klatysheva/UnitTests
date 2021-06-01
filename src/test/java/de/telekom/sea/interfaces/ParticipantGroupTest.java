@@ -16,6 +16,10 @@ public class ParticipantGroupTest {
         cut = new ParticipantGroup(2);
     }
 
+    @AfterEach
+    void teardown() {
+        cut = null;
+    }
 
     @Test
     void size_test() {
@@ -207,8 +211,4 @@ public class ParticipantGroupTest {
         assertEquals(1, cut.search("remove_positive_test surname1").size());
     }
 
-    @AfterEach
-    void teardown() {
-        cut = null;
-    }
 }
